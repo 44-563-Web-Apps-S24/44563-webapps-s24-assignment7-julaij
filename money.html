@@ -20,143 +20,205 @@
     <h1 class="text-muted">Find the coins by Julai Dangol</h1>
     <p class="col-md-5" style="background-color:lavenderblush;">Click on the locations to find
       coins, beware the monster</p>
-      <div class="row">
-        <p class="col-md-3" id="locations" style="background-color:lavender;">Number of locations checked is zero.</p>
-        <p class="col-md-3" id="score">Score is zero.</p>
-        <p class="col-md-3" >Click for help.</p>
-        <p class="col-md-3" id="help">Help Report</p>
-      </div>
-   
+    <div class="row">
+      <p class="col-md-3" id="locations" style="background-color:lavender;">Number of locations checked is zero.</p>
+      <p class="col-md-3" style="background-color:skyblue;" id="score">Score is zero.</p>
+      <p type="button" style="background-color:lightgreen;" class="col-md-3" onclick="help()">Click for help.</p>
+      <p class="col-md-3" id="help" style="background-color: aqua;">Help Report</p>
+    </div>
+
 
     <div class="container">
       <div class="row">
         <!-- Repeat this block for each image -->
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image0" onclick="check(0)" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image1" onclick="check(1)" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image2" onclick="check(2)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image3" onclick="check(3)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-      </div>
-      <div class="row">
-        <!-- Repeat this block for each image -->
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image4" onclick="check(4)" alt="Image 1" class="img-fluid">
         </div>
       </div>
       <div class="row">
         <!-- Repeat this block for each image -->
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image5" onclick="check(5)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image6" onclick="check(6)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image7" onclick="check(7)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image8" onclick="check(8)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-      </div>
-      <div class="row">
-        <!-- Repeat this block for each image -->
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image9" onclick="check(9)" alt="Image 1" class="img-fluid">
         </div>
       </div>
       <div class="row">
         <!-- Repeat this block for each image -->
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image10" onclick="check(10)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image11" onclick="check(11)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image12" onclick="check(12)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image13" onclick="check(13)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-      </div>
-      <div class="row">
-        <!-- Repeat this block for each image -->
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
-        </div>
-        <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image14" onclick="check(14)" alt="Image 1" class="img-fluid">
         </div>
       </div>
       <div class="row">
         <!-- Repeat this block for each image -->
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image15" onclick="check(15)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image16" onclick="check(16)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image17" onclick="check(17)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image18" onclick="check(18)" alt="Image 1" class="img-fluid">
         </div>
         <div class="col-md-1 mb-4">
-          <img src="building.jpg" alt="Image 1" class="img-fluid">
+          <img src="building.jpg" id="image19" onclick="check(19)" alt="Image 1" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <!-- Repeat this block for each image -->
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image20" onclick="check(20)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image21" onclick="check(21)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image22" onclick="check(22)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image23" onclick="check(23)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image24" onclick="check(24)" alt="Image 1" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <!-- Repeat this block for each image -->
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image25" onclick="check(25)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image26" onclick="check(26)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image27" onclick="check(27)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image28" onclick="check(28)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image29" onclick="check(29)" alt="Image 1" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <!-- Repeat this block for each image -->
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image30" onclick="check(30)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image31" onclick="check(31)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image32" onclick="check(32)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image33" onclick="check(33)" alt="Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-1 mb-4">
+          <img src="building.jpg" id="image34" onclick="check(34)" alt="Image 1" class="img-fluid">
         </div>
       </div>
     </div>
   </div>
+  <script>
+    const ids = [
+      "image0", "image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8",
+      "image9", "image10", "image11", "image12", "image13", "image14", "image15", "image16", "image17",
+      "image18", "image19", "image20", "image21", "image22", "image23", "image24", "image25", "image26",
+      "image27", "image28", "image29", "image30", "image31", "image32", "image33", "image34"
+    ];
+    var score = 0;
+    var locations = 0;
+    var lastLocation = 0;
+    const fancyCoinLocations = [2, 5, 14, 19, 23, 33];
+    var monsterLocation = 20;
+    var gameOver = false;
+
+    function check(position) {
+      if (gameOver) {
+        return;
+      }
+      id = ids[position];
+      image = document.getElementById(id);
+      if (fancyCoinLocations.includes(position)) {
+        image.src = "./fancy_coin.jpg";
+        score += 3;
+      }
+      else if (position == monsterLocation) {
+        image.src = "./monster.jpg"
+        gameOver = true;
+        score -= 5;
+      }
+      else {
+        image.src = "./coin.jpg"
+        score += 1;
+      }
+      locations += 1;
+      lastLocation = position;
+
+      location_text = document.getElementById("locations");
+      location_text.innerHTML = locations;
+
+      score_text = document.getElementById("score");
+      score_text.innerHTML = score;
+    }
+
+    function help() {
+      console.log("help called")
+      const result = ["So close", "Grrr", "All clear"];
+      help_text = document.getElementById("help");
+      var row = location / 5;
+      var col = location % 5;
+      const kinship_locations = [lastLocation + 1, lastLocation - 1, lastLocation + 5, lastLocation - 5];
+      const grr_locations = [monsterLocation + 1, monsterLocation - 5, monsterLocation + 5]
+      if (kinship_locations.some((element) => fancyCoinLocations.includes(element))) {
+        help_text.innerHTML = result[0];
+      }
+      else if (grr_locations.includes(lastLocation)) {
+        help_text.innerHTML = result[1];
+      }
+      else {
+        help_text.innerHTML = result[2];
+      }
+    }
+  </script>
 </body>
 
 </html>
