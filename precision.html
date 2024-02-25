@@ -30,6 +30,7 @@
 
   <script>
     var stopTime = undefined;
+    var maxCountDown = 0;
 
     function recordTime() {
       stopTime = Date.now()
@@ -37,10 +38,12 @@
     }
 
     function startTime() {
-      for (let i = 0; i < 5; i++) {
+      stopTime = undefined;
+      maxCountDown = Math.floor(Math.random() * 8) + 2
+      for (let i = 0; i < maxCountDown; i++) {
         setTimeout(function () {
           document.getElementById('counter').innerHTML = i;
-        }, (4 - i) * 1000)
+        }, (maxCountDown - i) * 1000)
       }
       setTimeout(function () {
         if (stopTime === undefined) {
@@ -49,7 +52,7 @@
           let elapsedTime = stopTime - Date.now();
           document.getElementById('target').innerHTML = "Time was " + Math.abs(elapsedTime) + " milliseconds";
         }
-      }, 4000);
+      }, maxCountDown * 1000);
 
     }
   </script>
