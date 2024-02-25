@@ -18,11 +18,11 @@
   <div id="target">
     Your Time
   </div>
-  <div id="count">
+  <div id="counter">
     Count
   </div>
 
-  <button type="button" class="btn btn-primary" onclick="buttonPress1()">
+  <button type="button" class="btn btn-primary" onclick="startTime()">
     Start Timer</button>
 
   <button type="button" class="btn btn-primary" onclick="recordTime()">
@@ -33,12 +33,24 @@
 
     function recordTime() {
       stopTime = Date.now()
-      console.log(stopTime)
+      console.log(stopTime);
     }
-    function buttonPress1() {
+
+    function startTime() {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(function () {
+          document.getElementById('counter').innerHTML = i;
+        }, (4 - i) * 1000)
+      }
       setTimeout(function () {
-        document.getElementById('target').style.color = "red"
-      }, 3000)
+        if (stopTime === undefined) {
+          document.getElementById("target").innerHTML = "Too Slow"
+        } else {
+          let elapsedTime = stopTime - Date.now();
+          document.getElementById('target').innerHTML = "Time was " + Math.abs(elapsedTime) + " milliseconds";
+        }
+      }, 4000);
+
     }
   </script>
 
