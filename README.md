@@ -3,6 +3,9 @@
 An assignment on java script modifying the DOM and using anonymous callback functions.
 
 Hosted At : [Money](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment7-julaij/money.html)
+---
 Hosted At : [Precision](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment7-julaij/precision.html)
+---
 Hosted At : [Divlist](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment7-julaij/divlist.html)
+---
 
