@@ -30,6 +30,7 @@
 
   <script>
     var stopTime = undefined;
+    var startingTime = undefined;
     var maxCountDown = 0;
 
     function recordTime() {
@@ -39,6 +40,7 @@
 
     function startTime() {
       stopTime = undefined;
+      startingTime = Date.now()
       maxCountDown = Math.floor(Math.random() * 8) + 2
       for (let i = 0; i < maxCountDown; i++) {
         setTimeout(function () {
@@ -49,7 +51,7 @@
         if (stopTime === undefined) {
           document.getElementById("target").innerHTML = "Too Slow"
         } else {
-          let elapsedTime = stopTime - Date.now();
+          let elapsedTime = stopTime - startingTime;
           document.getElementById('target').innerHTML = "Time was " + Math.abs(elapsedTime) + " milliseconds";
         }
       }, maxCountDown * 1000);
