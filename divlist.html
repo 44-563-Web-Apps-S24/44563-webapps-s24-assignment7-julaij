@@ -45,6 +45,8 @@
 	<button onclick="makeNewDiv()">Add end</button>
 	<button onclick="addFront()">Add Front</button>
 	<button onclick="remove()">Remove</button>
+	<button onclick="swap()">Swap</button>
+
 
 
 
@@ -77,9 +79,28 @@
 		element.style.color = "orange"
 		let container = document.getElementById('target')
 		container.insertBefore(element, container.firstChild);
-
-
 	}
+
+	function swap() {
+		var container = document.getElementById('target');
+		var len = container.children.length;
+
+		if (len > 1) {
+			var index1 = Math.floor(Math.random() * len);
+			var index2;
+
+			do {
+				index2 = Math.floor(Math.random() * len);
+			} while (index1 === index2);
+
+			var element1 = container.children[index1];
+			var element2 = container.children[index2];
+
+			container.insertBefore(element2, container.children[index1]);
+			container.insertBefore(element1, container.children[index2]);
+		}
+	}
+
 
 </script>
 

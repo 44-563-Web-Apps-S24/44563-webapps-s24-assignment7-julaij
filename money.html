@@ -245,6 +245,7 @@
       }
     }
     function resetLocations() {
+      gameOver = false;
       score = 0;
       locations = 0;
       lastLocation = 0;
@@ -252,10 +253,8 @@
       updateLabels();
       help_text = document.getElementById("help");
       help_text.innerHTML = "Help Report"
-
       var imgElements = document.querySelectorAll("img");
       imgElements.forEach((image) => image.src = "./building.jpg");
-
     }
   </script>
 </body>
