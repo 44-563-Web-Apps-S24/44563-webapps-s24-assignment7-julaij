@@ -8,4 +8,3 @@ Hosted At : [Precision](https://44-563-web-apps-s24.github.io/44563-webapps-s24-
 ---
 Hosted At : [Divlist](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment7-julaij/divlist.html)
 ---
-

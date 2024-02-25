@@ -18,15 +18,18 @@
 <body>
   <div class="container-fluid">
     <h1 class="text-muted">Find the coins by Julai Dangol</h1>
-    <p class="col-md-5" style="background-color:lavenderblush;">Click on the locations to find
-      coins, beware the monster</p>
+    <div class="row">
+      <p class="col-md-5" style="background-color:lavenderblush;">Click on the locations to find
+        coins, beware the monster</p>
+      <button type="button" style="margin-left: 10px;" class="btn btn-warning col-sm-1"
+        onclick="resetLocations()">Reset</button>
+    </div>
     <div class="row">
       <p class="col-md-3" id="locations" style="background-color:lavender;">Number of locations checked is zero.</p>
       <p class="col-md-3" style="background-color:skyblue;" id="score">Score is zero.</p>
       <p type="button" style="background-color:lightgreen;" class="col-md-3" onclick="help()">Click for help.</p>
       <p class="col-md-3" id="help" style="background-color: aqua;">Help Report</p>
     </div>
-
 
     <div class="container">
       <div class="row">
@@ -167,9 +170,29 @@
     var score = 0;
     var locations = 0;
     var lastLocation = 0;
-    const fancyCoinLocations = [2, 5, 14, 19, 23, 33];
-    var monsterLocation = 20;
     var gameOver = false;
+    var fourRandomNumbers = [];
+    var fancyCoinLocations = [];
+    var monsterLocation = [];
+    initializeLocations();
+
+    function initializeLocations() {
+      fourRandomNumbers = genFourRandomNumbers();
+      fancyCoinLocations = fourRandomNumbers.slice(0, 2);
+      monsterLocation = fourRandomNumbers.slice(2);
+
+      console.log("fancy is " + fancyCoinLocations);
+      console.log("monster is " + monsterLocation);
+    }
+
+    function genFourRandomNumbers() {
+      const random = new Set();
+      while (random.size < 4) {
+        random.add(Math.floor(Math.random() * 35));
+      }
+      var arr1 = Array.from(random);
+      return arr1;
+    }
 
     function check(position) {
       if (gameOver) {
@@ -181,7 +204,7 @@
         image.src = "./fancy_coin.jpg";
         score += 3;
       }
-      else if (position == monsterLocation) {
+      else if (monsterLocation.includes(position)) {
         image.src = "./monster.jpg"
         gameOver = true;
         score -= 5;
@@ -192,7 +215,10 @@
       }
       locations += 1;
       lastLocation = position;
+      updateLabels();
+    }
 
+    function updateLabels() {
       location_text = document.getElementById("locations");
       location_text.innerHTML = locations;
 
@@ -217,6 +243,19 @@
       else {
         help_text.innerHTML = result[2];
       }
+    }
+    function resetLocations() {
+      score = 0;
+      locations = 0;
+      lastLocation = 0;
+      initializeLocations();
+      updateLabels();
+      help_text = document.getElementById("help");
+      help_text.innerHTML = "Help Report"
+
+      var imgElements = document.querySelectorAll("img");
+      imgElements.forEach((image) => image.src = "./building.jpg");
+
     }
   </script>
 </body>
